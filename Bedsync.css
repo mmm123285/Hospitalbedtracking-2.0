@@ -20,7 +20,32 @@ main{
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   }
 
+     .email {
+    padding: 10px;
+    border: 3px solid #4285F4;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 16px;
+    width: 300px;
+    margin-bottom: 20px;
+    margin-left: 500px;
+}
+.control-btn1 {  
+      padding: 10px 10px;
 
+     border: 2px solid #4285f4;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+    margin-left: -5px;
+    width: 60px;
+    height: 43px;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
 
 
 
