@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bedsync.css">
+    <title>Real-Time Hospital Bed Availability</title>
+</head>
+<body>
+    <div class="live-indicator">🔴 LIVE</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Hospital Bed Tracker</h1>
+            <p>Real-time availability across all hospitals</p>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn active" data-filter="all">All Hospitals</button>
+            <button class="control-btn" data-filter="available">Available Beds</button>
+            <button class="control-btn" data-filter="critical">Critical Only</button>
+            <button class="control-btn" onclick="refreshData()">🔄 Refresh</button>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number stat-total" id="totalBeds">1,247</div>
+                <div class="stats-label">Total Beds</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number stat-available" id="availableBeds">847</div>
+                <div class="stats-label">Available</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number stat-occupied" id="occupiedBeds">400</div>
+                <div class="stats-label">Occupied</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number stat-critical" id="criticalBeds">23</div>
+                <div class="stats-label">Critical</div>
+            </div>
+        </div>
+
+        <div class="hospitals-grid" id="hospitalsGrid">
+            <!-- Hospitals will be populated by JavaScript -->
+        </div>
+
+        <div class="map-placeholder">
+            <iframe
+            src="https://www.google.com/maps?q=lucknow&output=embed"
+            width="7000" 
+            height="300">
+            </iframe>"
+    
+        </div>
+    </div>
+
+    <script src="Bedsync.js"></script>  
+</body>
+</html>
+
